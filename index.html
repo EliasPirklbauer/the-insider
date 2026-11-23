@@ -12,8 +12,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" href="icons/icon-192.png">
-<script>window.SA=1;window.BUILD="2026.11.09";try{window.__ls0={has:!!localStorage.getItem("franchisehub.v1"),t:+localStorage.getItem("franchisehub.v1.t")||0}}catch(e){window.__ls0={has:false,t:0}}</script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
+<script>window.SA=1;window.BUILD="2026.11.23";try{window.__ls0={has:!!localStorage.getItem("franchisehub.v1"),t:+localStorage.getItem("franchisehub.v1.t")||0}}catch(e){window.__ls0={has:false,t:0}}</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&family=Playfair+Display:wght@700;900&display=swap">
 <style>
 :root{--bg:#f2f4f7;--card:#fff;--ink:#0e1a2b;--mut:#5d6b7e;--line:#dde2ea;--acc:#1b7a4b;--accbg:#e3f3ea;--warn:#b4232c;
 box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -167,6 +167,71 @@ td input.dd{width:50px}
 @media (max-width:900px){.nlead{grid-template-columns:minmax(0,1fr)}.ngrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.ngrid{grid-template-columns:minmax(0,1fr)}.nh.xl{font-size:30px}.nhead h1{font-size:36px}.rh{font-size:32px}.rsub{font-size:18px}.art.rb{font-size:18px}.art.rb p.lead{font-size:20px}.art.rb blockquote.pull{font-size:23px}.fg.l,.fg.r{float:none;margin:14px auto}.fg.s25,.fg.s33,.fg.s50{width:70%}}
 
+/* ===== Zeitung ===== */
+.nmode{margin:6px 0 12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.pnav{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 0 12px}
+.pnav select{min-width:0;max-width:100%;flex:0 1 260px}
+.pnav .btn:disabled{opacity:.4;cursor:default}
+.paper{--pp:#f6f1e4;--pk:#1b1a17;--pm:#6a6354;--pl:#1b1a17;--pr:#b9af96;--pred:#a8202a;background:var(--pp);color:var(--pk);border:1px solid #cfc6ad;border-radius:4px;padding:16px 22px 26px;font-family:Georgia,"Times New Roman",serif;box-shadow:0 6px 22px rgba(0,0,0,.08);overflow:hidden}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .paper{--pp:#1d1b16;--pk:#ece6d6;--pm:#a79f8b;--pl:#ece6d6;--pr:#4a4638;--pred:#ff8087;border-color:#3b3729}}
+:root[data-theme="dark"] .paper{--pp:#1d1b16;--pk:#ece6d6;--pm:#a79f8b;--pl:#ece6d6;--pr:#4a4638;--pred:#ff8087;border-color:#3b3729}
+.paper .mut{color:var(--pm)}
+.pmast{text-align:center;border-bottom:3px double var(--pl);padding-bottom:12px;margin-bottom:16px}
+.pstrip{display:flex;justify-content:space-between;gap:4px 12px;flex-wrap:wrap;font:600 11px/1.5 Barlow,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--pm);border-top:1px solid var(--pl);border-bottom:1px solid var(--pl);padding:4px 0}
+.ptitle{font:900 clamp(38px,9.5vw,96px)/1 "Playfair Display",Georgia,serif;margin:10px 0;letter-spacing:-.01em;text-transform:none}
+.pk{display:block;font:700 11px/1.3 Barlow,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--pred);margin-bottom:5px}
+.ph1,.ph2,.ph3{font-family:"Playfair Display",Georgia,serif;font-weight:900;margin:0;color:var(--pk)}
+.ph1{font-size:clamp(28px,4.4vw,52px);line-height:1.04}
+.ph2{font-size:22px;line-height:1.15}.ph3{font-size:18px;line-height:1.2;font-weight:700}
+.pdeck{font:italic 400 19px/1.4 Georgia,serif;color:var(--pm);margin:10px 0 0}
+.pby{font:600 11px/1.4 Barlow,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--pm);margin:8px 0 10px}
+.pbody{font:400 15px/1.5 Georgia,serif;margin:6px 0 0}
+.plink{cursor:pointer}.plink:hover .ph1,.plink:hover .ph2,.plink:hover .ph3{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.plink:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.paper .nimg{border-radius:0;border:1px solid var(--pr);margin:6px 0 12px;aspect-ratio:16/9}
+.pcols{column-count:2;column-gap:26px;column-rule:1px solid var(--pr);text-align:justify;hyphens:auto;font:400 16px/1.55 Georgia,serif}
+.pcols.one{column-count:1;column-rule:0}.pcols p{margin:0}.pcols.dc p::first-letter{float:left;font:900 58px/.82 "Playfair Display",Georgia,serif;padding:6px 8px 0 0;color:var(--pk)}
+.pmorelnk{margin:8px 0 0}
+.pgrid{display:grid;grid-template-columns:minmax(0,2.1fr) minmax(0,1fr)}
+.pmain{padding-right:22px;border-right:1px solid var(--pr);min-width:0}
+.pside{padding-left:22px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.p3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--pr);margin-top:20px}
+.p3 .pc{padding:14px 16px 4px;border-right:1px solid var(--pr)}.p3 .pc:first-child{padding-left:0}.p3 .pc:last-child{border-right:0;padding-right:0}
+.pgr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 0}
+.pgr .pc{padding:0 16px;border-right:1px solid var(--pr)}.pgr .pc:nth-child(3n){border-right:0}.pgr .pc:nth-child(3n+1){padding-left:0}
+.psh{display:flex;align-items:baseline;gap:12px;border-top:3px double var(--pl);border-bottom:1px solid var(--pl);margin:34px 0 16px;padding:6px 0}
+.psh h2{font:900 26px/1.1 "Playfair Display",Georgia,serif;margin:0;color:var(--pk)}
+.pno{margin-left:auto;font:600 11px Barlow,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--pm)}
+.pbox{border:1px solid var(--pl);padding:10px 12px;background:transparent}
+.pbh{font:700 12px/1.3 Barlow,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;border-bottom:2px solid var(--pl);margin-bottom:8px;padding-bottom:4px;color:var(--pk)}
+.psc{all:unset;box-sizing:border-box;display:grid;grid-template-columns:1fr auto 1fr auto;gap:0 8px;align-items:baseline;width:100%;padding:5px 0;border-bottom:1px dotted var(--pr);font:500 14px Barlow,system-ui,sans-serif;color:var(--pk);cursor:pointer}
+.psc:last-child{border-bottom:0}.psc:hover{background:rgba(127,127,127,.1)}.psc:focus-visible{outline:2px solid var(--acc)}
+.psc span:nth-child(3){text-align:left}.psc b{font-variant-numeric:tabular-nums}.psc .w{font-weight:700}.psc span:not(.w),.psc b:not(.w){color:var(--pm)}
+.pidx,.prk{margin:0;padding:0;list-style:none;font:500 14px/1.7 Barlow,system-ui,sans-serif}
+.pidx li{display:flex;gap:8px;align-items:baseline}.pidx li span{flex:1;border-bottom:1px dotted var(--pr)}.pidx i{font-style:normal;font-weight:700;font-variant-numeric:tabular-nums}
+.prk{counter-reset:r;columns:2;column-gap:26px}.prk li{counter-increment:r;break-inside:avoid;border-bottom:1px dotted var(--pr);padding:2px 0}.prk li::before{content:counter(r)".";display:inline-block;width:1.6em;font-weight:700;color:var(--pm)}
+.plist{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 18px;font:500 14px Barlow,system-ui,sans-serif}.plist.wide{grid-template-columns:repeat(2,minmax(0,1fr))}
+.plst{margin:0;padding:0;list-style:none;font:500 14px/1.5 Barlow,system-ui,sans-serif}.plst li{padding:5px 0;border-bottom:1px dotted var(--pr)}.plst li:last-child{border-bottom:0}
+.ptabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.pdv table{width:100%;border-collapse:collapse;font:500 13px Barlow,system-ui,sans-serif}.pdv td{padding:3px 0;border-bottom:1px dotted var(--pr);white-space:nowrap}.pdv td:first-child{white-space:normal}.pdv td:not(:first-child){text-align:right;padding-left:8px}
+.pdv .pos{color:#1b7a4b}.pdv .neg{color:var(--pred)}
+.pfoot{margin:30px 0 0;padding-top:10px;border-top:3px double var(--pl);text-align:center;font:italic 400 14px Georgia,serif;color:var(--pm)}
+@media (max-width:900px){
+  .pgrid{grid-template-columns:minmax(0,1fr)}.pmain{padding-right:0;border-right:0;padding-bottom:18px}.pside{padding-left:0;border-top:1px solid var(--pr);padding-top:16px}
+  .p3,.pgr{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .p3 .pc:nth-child(2){border-right:0;padding-right:0}.p3 .pc:nth-child(3){grid-column:1/-1;border-top:1px solid var(--pr);border-right:0;padding-left:0;padding-top:14px;margin-top:10px}
+  .pgr .pc{border-right:1px solid var(--pr);padding:0 14px}.pgr .pc:nth-child(odd){padding-left:0}.pgr .pc:nth-child(even){border-right:0;padding-right:0}
+  .ptabs{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:560px){
+  .paper{padding:12px 14px 22px}
+  .pcols{column-count:1}.p3,.pgr{grid-template-columns:minmax(0,1fr)}
+  .p3 .pc,.pgr .pc{border-right:0!important;padding:14px 0 0!important;border-top:1px solid var(--pr);margin-top:12px!important}.pgr .pc:first-child{border-top:0;margin-top:0!important;padding-top:0!important}
+  .p3 .pc:nth-child(3){grid-column:auto}
+  .plist,.plist.wide{grid-template-columns:minmax(0,1fr)}.prk{columns:1}
+  .pstrip{justify-content:center;text-align:center}.psh h2{font-size:22px}
+}
+
 /* ===== Responsive ===== */
 .tabs{max-width:100%;overflow-x:auto;scrollbar-width:none}
 .pbn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:8px;padding:3px 6px;background:var(--card)}.pbn .btn{min-width:32px;padding:4px 8px}.pbn b:first-child{min-width:34px;font-size:13px}
@@ -234,7 +299,7 @@ const TEAMS=("AFC|East|BUF Buffalo Bills,MIA Miami Dolphins,NE New England Patri
 .flatMap(l=>{const[c,d,t]=l.split("|");return t.split(",").map(x=>{const[a,...n]=x.split(" ");return{a,n:n.join(" "),c,d}})});
 const SECTIONS=[["home","Startseite"],["standings","Standings"],["scores","Scores & Schedule"],["teams","Teams"],["stats","Stats"],["draft","Draft"],["news","News"]];
 const KEY="franchisehub.v1";
-let S={arts:[],team:"KC",season:2026,week:1,view:"home",conf:"AFC",edit:false,rec:{},games:[],sv:"week",st:"BUF",edG:null,fp:{},trades:[],trA:"BUF",trB:"MIA",trSel:{a:[],b:[]},trPf:"ALL",tmH:"overview",pb:{},pbSide:"off",pbSel:null,pbTool:"route",pbMode:"free",pbCol:0,pbCat:"",pbMsg:"",pbAuto:{},pbSpd:1,scheme:{},fmT:"off",nT:"all",drafts:{},drT:"order",drR:1,drEd:false,drPf:"ALL",drMsg:"",stT:"players",stC:"pass",sortP:null,sortT:"pf",stF:"",seasons:[2026],arch:{},ns:false,nsMsg:"",depth:{},dgi:0,tlogo:{},tlMsg:"",fc:"",fd:"",usd:false,roster:{},cap:255,dead:{},tm:null,tmTab:"roster",tmEd:false,pf:"ALL",tmMsg:"",gc:null,gcTab:"team",gcT:"a",gcEd:false,lead:{},news:[],coaches:{},fa:[],tx:[],relId:null,relD:0,faPf:"ALL",faQ:"",faMsg:"",sq:"",sqP:"ALL",sqT:"",editLead:false,nr:null,auth:""};
+let S={arts:[],team:"KC",season:2026,week:1,view:"home",conf:"AFC",edit:false,rec:{},games:[],sv:"week",st:"BUF",edG:null,fp:{},trades:[],trA:"BUF",trB:"MIA",trSel:{a:[],b:[]},trPf:"ALL",tmH:"overview",pb:{},pbSide:"off",pbSel:null,pbTool:"route",pbMode:"free",pbCol:0,pbCat:"",pbMsg:"",pbAuto:{},pbSpd:1,scheme:{},fmT:"off",nT:"all",drafts:{},drT:"order",drR:1,drEd:false,drPf:"ALL",drMsg:"",stT:"players",stC:"pass",sortP:null,sortT:"pf",stF:"",seasons:[2026],arch:{},ns:false,nsMsg:"",depth:{},dgi:0,tlogo:{},tlMsg:"",fc:"",fd:"",usd:false,roster:{},cap:255,dead:{},tm:null,tmTab:"roster",tmEd:false,pf:"ALL",tmMsg:"",gc:null,gcTab:"team",gcT:"a",gcEd:false,lead:{},news:[],coaches:{},fa:[],tx:[],relId:null,relD:0,faPf:"ALL",faQ:"",faMsg:"",sq:"",sqP:"ALL",sqT:"",editLead:false,nr:null,auth:"",nMode:"paper",nEd:""};
 const DEF=JSON.parse(JSON.stringify(S));
 try{const r=localStorage.getItem(KEY);if(r)Object.assign(S,JSON.parse(r))}catch(e){}
 if(!S.usd){const k=1e6;S.cap=Math.round((+S.cap||255)*k);Object.keys(S.dead).forEach(a=>S.dead[a]=Math.round((+S.dead[a]||0)*k));
@@ -243,7 +308,7 @@ if(!S.seasons.includes(S.season))S.seasons.push(S.season);
 S.games.forEach(g=>{if(!S.seasons.includes(g.s))S.seasons.push(g.s)});
 TEAMS.forEach(t=>{if(!S.rec[t.a])S.rec[t.a]={w:0,l:0,t:0,pf:0,pa:0}});
 let _lj=null;
-const UIK=new Set("view conf edit sv st edG trA trB trSel trPf tmH pbSide pbSel pbTool pbMode pbCol pbCat pbMsg pbAuto pbSpd fmT nT drT drR drEd drPf drMsg stT stC sortP sortT stF ns nsMsg dgi tlMsg fc fd tm tmTab tmEd pf tmMsg gc gcTab gcT gcEd editLead relId relD faPf faQ faMsg sq sqP sqT nr".split(" "));
+const UIK=new Set("view conf edit sv st edG trA trB trSel trPf tmH pbSide pbSel pbTool pbMode pbCol pbCat pbMsg pbAuto pbSpd fmT nT drT drR drEd drPf drMsg stT stC sortP sortT stF ns nsMsg dgi tlMsg fc fd tm tmTab tmEd pf tmMsg gc gcTab gcT gcEd editLead relId relD faPf faQ faMsg sq sqP sqT nr nMode nEd".split(" "));
 const dataS=()=>{const c={};for(const k in S)if(k!=="_ts"&&!UIK.has(k))c[k]=S[k];if(c.roster){const r={};for(const a in c.roster)if(c.roster[a]&&c.roster[a].length)r[a]=c.roster[a];c.roster=r}return c};
 const stJson=()=>JSON.stringify(dataS());
 const save=()=>{try{const j=stJson();if(j!==_lj){if(_lj!==null&&(S._ts||BK.init))S._ts=Date.now();_lj=j;bkDirty()}localStorage.setItem(KEY,JSON.stringify(S));try{localStorage.setItem(KEY+".t",String(Date.now()))}catch(e){}}catch(e){}if(window.idbMirror)idbMirror()};
@@ -1135,13 +1200,13 @@ function perf(g){
   if(c)o.push(`${c.n} fängt ${c.v} Yards`);
   return o.length?"Bester Mann des Spiels: "+o.join(", ")+".":"";
 }
-function gameStory(g){
+function gameStory(g,rf,when){rf=rf||rec;
   const a=g.a,h=g.h,hi=Math.max(g.ap,g.hp),lo=Math.min(g.ap,g.hp),m=hi-lo,tag="Spiel · "+WL(g.w);
   if(!m)return{k:"game",tm:[a,h],gid:g.id,tag,h:`${T(a).n} und ${T(h).n} trennen sich ${hi}:${lo} unentschieden`,b:`Kein Sieger in ${WL(g.w)}. ${perf(g)}`.trim()};
   const w=g.ap>g.hp?a:h,l=w===a?h:a,v=m<=3?"bezwingen knapp":m>=17?"deklassieren":"schlagen";
   const to=g.ts&&g.ts.to?{w:+g.ts.to[w===a?"a":"h"]||0,l:+g.ts.to[w===a?"h":"a"]||0}:null;
   const tt=to&&to.l-to.w>=2?` Die Turnover (${to.w}:${to.l}) gaben den Ausschlag.`:"";
-  return{k:"game",tm:[w,l],gid:g.id,tag,h:`${T(w).n} ${v} ${T(l).n} ${hi}:${lo}`,b:`${T(w).n} gewinnen in ${WL(g.w)} mit ${m} Punkten Vorsprung und stehen aktuell bei ${rec(w)}, ${T(l).n} bei ${rec(l)}.${tt} ${perf(g)}`.trim()};
+  return{k:"game",tm:[w,l],gid:g.id,tag,h:`${T(w).n} ${v} ${T(l).n} ${hi}:${lo}`,b:`${T(w).n} gewinnen in ${WL(g.w)} mit ${m} Punkten Vorsprung und stehen ${when||"aktuell"} bei ${rf(w)}, ${T(l).n} bei ${rf(l)}.${tt} ${perf(g)}`.trim()};
 }
 function newsItems(){
   const out=[],pl=played();
@@ -1246,7 +1311,7 @@ function newsReader(x,o={}){
   const bodyH=own?sanitizeHTML(a.h):autoBody(x),words=artText(bodyH).split(/\s+/).filter(Boolean).length,min=Math.max(1,Math.round(words/200));
   const cover=own?(x.img?`<figure class="rcov"><div class="nimg" style="aspect-ratio:16/9"><img src="${esc(x.img)}" alt="" style="object-position:50% ${x.cf==="bottom"?"100%":x.cf==="top"?"0%":"50%"}"></div>${a.cc?`<figcaption>${esc(a.cc)}</figcaption>`:""}</figure>`:""):`<figure class="rcov">${nimg(x)}</figure>`;
   const F=o.prev?null:newsFeed(),more=F?F.all.filter(y=>y.id!==x.id).slice(0,3):[];
-  const acts=o.prev?`<button class="btn" id="artPrevBack">‹ Zurück zum Editor</button>`:`<button class="btn" id="nrBack">‹ News</button>${own?`<span style="margin-left:auto;display:flex;gap:6px"><button class="btn" data-ae="${a.id}">Bearbeiten</button><button class="btn" data-ad="${a.id}">${ART.del===a.id?"Wirklich löschen?":"Löschen"}</button></span>`:""}`;
+  const acts=o.prev?`<button class="btn" id="artPrevBack">‹ Zurück zum Editor</button>`:`<button class="btn" id="nrBack">‹ ${(S.nMode||"paper")==="paper"?"Zur Zeitung":"News"}</button>${own?`<span style="margin-left:auto;display:flex;gap:6px"><button class="btn" data-ae="${a.id}">Bearbeiten</button><button class="btn" data-ad="${a.id}">${ART.del===a.id?"Wirklich löschen?":"Löschen"}</button></span>`:""}`;
   return `<div class="rd">${o.prev?`<div class="pvban"><b>Vorschau</b><span class="mut">So sieht der Artikel für Leser aus. Noch nicht veröffentlicht.</span></div>`:""}
   <div class="row rdbar">${acts}</div>
   <article><span class="tag">${esc(x.tag)}</span><h1 class="rh">${esc(x.h||"Ohne Titel")}</h1>${own&&a.sub?`<p class="rsub">${esc(a.sub)}</p>`:""}
@@ -1256,10 +1321,100 @@ function newsReader(x,o={}){
   </article>
   ${more.length?`<section class="nsec"><div class="nsh"><h2>Weitere Artikel</h2></div><div class="ngrid">${more.map(y=>ncard(y,{})).join("")}</div></section>`:""}</div>`;
 }
+/* ===== Zeitung: wöchentliche Ausgaben ===== */
+const PP={};
+const edKey=(s,w)=>s+"-"+w;
+const edHas=(s,w)=>S.games.some(g=>g.s===s&&g.w===w)||S.trades.some(t=>t.s===s&&t.w===w)||(S.tx||[]).some(t=>t.s===s&&t.w===w)||(S.arts||[]).some(a=>a.eid===edKey(s,w));
+function edList(){
+  const out=[],ss=[...new Set([...(S.seasons||[]),S.season])].sort((a,b)=>a-b);
+  ss.forEach(s=>{for(let w=1;w<=22;w++){const cur=s===S.season&&w===S.week;if(cur||((s<S.season||w<S.week)&&edHas(s,w)))out.push({s,w,k:edKey(s,w)})}});
+  return out.reverse();
+}
+const edCur=e=>e.s===S.season&&e.w===S.week;
+function edSel(){const L=edList();return L.find(e=>e.k===S.nEd)||L.find(edCur)||L[0]}
+const edSelKey=()=>{const e=edSel();return e?e.k:edKey(S.season,S.week)};
+const edName=e=>"Ausgabe "+e.w+(e.w>18?" · "+WL(e.w):"");
+function edOpts(sel){
+  const L=edList();
+  if(sel&&!L.some(e=>e.k===sel)){const p=/^(\d+)-(\d+)$/.exec(sel);if(p)L.push({s:+p[1],w:+p[2],k:sel})}
+  return L.map(e=>`<option value="${e.k}" ${e.k===sel?"selected":""}>${e.s} · ${edName(e)}${edCur(e)?" (aktuell)":""}</option>`).join("");
+}
+const edStamp=()=>{(S.arts||[]).forEach(a=>{if(!a.eid)a.eid=edKey(S.season,S.week)})};
+function recAt(s,w){
+  const r={};TEAMS.forEach(t=>{r[t.a]={w:0,l:0,t:0,pf:0,pa:0}});
+  S.games.filter(g=>g.s===s&&g.w<=Math.min(w,18)&&g.ap!=null).forEach(g=>{
+    const A=r[g.a],H=r[g.h];if(!A||!H)return;A.pf+=g.ap;A.pa+=g.hp;H.pf+=g.hp;H.pa+=g.ap;
+    if(g.ap>g.hp){A.w++;H.l++}else if(g.ap<g.hp){H.w++;A.l++}else{A.t++;H.t++}});
+  const n=a=>r[a].w+r[a].l+r[a].t,pc=a=>n(a)?(r[a].w+r[a].t/2)/n(a):0,df=a=>r[a].pf-r[a].pa;
+  return{n,pc,df,str:a=>r[a].w+"-"+r[a].l+(r[a].t?"-"+r[a].t:""),cmp:(x,y)=>pc(y)-pc(x)||df(y)-df(x)};
+}
+const nick=a=>T(a)?T(a).n.split(" ").pop():a;
+const pEx=(t,n)=>{t=String(t||"").trim();if(t.length<=n)return t;const c=t.slice(0,n),i=Math.max(c.lastIndexOf(". "),c.lastIndexOf("! "));return i>n*.5?c.slice(0,i+1):c.replace(/\s+\S*$/,"")+" …"};
+function pReg(x){const it={id:"g:"+hs(x.tag+"|"+x.h),own:false,k:x.k,tag:x.tag,h:x.h,d:x.b||"",tm:x.tm||[],gid:x.gid,au:"The Insider",ts:null};PP[it.id]=it;return it}
+function pArt(a){const it={id:"a:"+a.id,own:true,a,k:catOfArt(a),tag:a.tag||"Artikel",h:a.t,d:a.sub||artSnip(a),img:a.cover,cf:a.cf,au:a.au||"",ts:a.ts};PP[it.id]=it;return it}
+const tradeStory=t=>({k:"trade",tm:[t.a,t.b],tag:"Trade · "+WL(t.w),h:`${T(t.a).n} und ${T(t.b).n} einigen sich auf einen Trade`,b:`${T(t.a).n} erhalten ${t.gb.join(", ")||"keinen Spieler und keinen Pick"}. ${T(t.b).n} erhalten ${t.ga.join(", ")||"keinen Spieler und keinen Pick"}. Tradewert: ${t.va.toLocaleString("de-DE")} zu ${t.vb.toLocaleString("de-DE")}.`});
+const gScore=g=>{const tot=g.ap+g.hp,m=Math.abs(g.ap-g.hp);return tot+(m<=3?12:0)-(m>=24?8:0)};
+const pcard=(x,l)=>`<article class="pc plink" data-nr="${esc(x.id)}" role="link" tabindex="0"><span class="pk">${esc(x.tag)}</span><h3 class="ph${l}">${esc(x.h)}</h3><p class="pbody">${esc(pEx(x.own?x.d:x.d,l===2?230:170))}</p><div class="pby">${esc(x.au||"The Insider")}</div></article>`;
+function paperView(){
+  for(const k in PP)delete PP[k];
+  const e=edSel(),{s,w}=e,cur=edCur(e),k=e.k,ra=recAt(s,w),when="nach "+WL(w),L=edList();
+  const ss=[...new Set([...(S.seasons||[]),S.season])].sort((a,b)=>a-b),jg=ss.indexOf(s)+1;
+  const gs=S.games.filter(g=>g.s===s&&g.w===w),done=gs.filter(g=>g.ap!=null),open=gs.filter(g=>g.ap==null);
+  const gst=done.slice().sort((x,y)=>gScore(y)-gScore(x)).map(g=>pReg(gameStory(g,ra.str,when)));
+  const trades=S.trades.filter(t=>t.s===s&&t.w===w).map(t=>pReg(tradeStory(t)));
+  const arts=(S.arts||[]).filter(a=>a.eid===k).sort((x,y)=>(y.top?1:0)-(x.top?1:0)||y.ts-x.ts).map(pArt);
+  const txs=(S.tx||[]).filter(t=>t.s===s&&t.w===w);
+  const order=[...arts.filter(x=>x.a.top),...gst.slice(0,1),...trades.slice(0,1),...arts.filter(x=>!x.a.top),...gst.slice(1),...trades.slice(1)];
+  const seen=new Set(),uniq=order.filter(x=>!seen.has(x.id)&&seen.add(x.id)),lead=uniq[0],more=uniq.slice(1,4),front=new Set(uniq.slice(0,4).map(x=>x.id));
+  /* Ressorts */
+  const S2=[];
+  const rest=gst.filter(x=>!front.has(x.id));
+  if(rest.length||open.length)S2.push(["Spiele der Woche",(rest.length?`<div class="pgr">${rest.map(x=>pcard(x,2)).join("")}</div>`:"")+(open.length?`<div class="pbox" style="margin-top:14px"><div class="pbh">Noch offen · ${WL(w)}</div><div class="plist">${open.map(g=>`<span>${esc(nick(g.a))} @ ${esc(nick(g.h))}</span>`).join("")}</div></div>`:"")]);
+  const ops=arts.filter(x=>!front.has(x.id));
+  if(ops.length)S2.push(["Meinung & Analyse",`<div class="pgr">${ops.map(x=>pcard(x,2)).join("")}</div>`]);
+  const anyG=TEAMS.some(t=>ra.n(t.a)>0);
+  if(anyG){
+    const divs=["AFC","NFC"].flatMap(c=>["East","North","South","West"].map(d=>{
+      const ts=TEAMS.filter(t=>t.c===c&&t.d===d).map(t=>t.a).sort(ra.cmp);
+      return `<div class="pdv"><div class="pbh">${c} ${d}</div><table>${ts.map(a=>`<tr><td><b>${a}</b> ${esc(nick(a))}</td><td>${ra.str(a)}</td><td class="${ra.df(a)>0?"pos":ra.df(a)<0?"neg":""}">${ra.df(a)>0?"+":""}${ra.df(a)}</td></tr>`).join("")}</table></div>`}));
+    const pr=TEAMS.filter(t=>ra.n(t.a)>0).map(t=>t.a).sort(ra.cmp).slice(0,10);
+    S2.push(["Liga & Tabellen",`<div class="ptabs">${divs.join("")}</div><div class="pbox" style="margin-top:16px"><div class="pbh">Power Rankings · ${when}</div><ol class="prk">${pr.map(a=>`<li><b>${esc(T(a).n)}</b> <span class="mut">${ra.str(a)}</span></li>`).join("")}</ol></div>`]);
+  }
+  const lab={release:"Entlassen",move:"Verschoben",sign:"Verpflichtet"},tn2=a=>T(a)?T(a).n:a;
+  if(trades.length||txs.length)S2.push(["Transfers & Transaktionen",(trades.length?`<div class="pgr">${trades.filter(x=>!front.has(x.id)).map(x=>pcard(x,2)).join("")}</div>`:"")+(txs.length?`<div class="pbox" style="margin-top:14px"><div class="pbh">Transaktionen</div><ul class="plst">${txs.map(t=>`<li><b>${lab[t.k]||esc(t.k)}</b> · ${esc(t.n||"")} (${esc(t.pos||"")}) <span class="mut">${t.k==="release"?esc(tn2(t.from))+(t.dead?" · Dead Cap "+M(t.dead):""):(t.from==="FA"?"Free Agent":esc(tn2(t.from)))+" → "+esc(tn2(t.to))}</span></li>`).join("")}</ul></div>`:"")]);
+  const nx=w<22?S.games.filter(g=>g.s===s&&g.w===w+1&&g.ap==null):[];
+  if(nx.length)S2.push([`Ausblick auf ${WL(w+1)}`,`<div class="pbox"><div class="plist wide">${nx.map(g=>`<span><b>${esc(nick(g.a))}</b> (${ra.str(g.a)}) @ <b>${esc(nick(g.h))}</b> (${ra.str(g.h)})</span>`).join("")}</div></div>`]);
+  if(cur){
+    const ni=newsItems(),dr=ni.filter(x=>x.k==="draft").slice(0,3).map(pReg),cp=ni.filter(x=>x.k==="cap").slice(0,3).map(pReg);
+    if(dr.length)S2.push(["Draft-Ecke",`<div class="pgr">${dr.map(x=>pcard(x,2)).join("")}</div>`]);
+    if(cp.length)S2.push(["Cap & Verträge",`<div class="pgr">${cp.map(x=>pcard(x,2)).join("")}</div>`]);
+    if(S.news.length)S2.push(["Kurz gemeldet",`<ul class="plst">${S.news.slice(0,8).map(h=>`<li>${esc(h)}</li>`).join("")}</ul>`]);
+  }
+  S2.forEach((x,i)=>{x.no=i+2});
+  /* Titelseite */
+  const lb=lead?(lead.own?pEx(artText(lead.a.h),760):pEx(lead.d,760)):"",lmin=lead&&lead.own?Math.max(1,Math.round(artText(lead.a.h).split(/\s+/).filter(Boolean).length/200)):0;
+  const mainH=lead?`<div class="pmain"><div class="plink" data-nr="${esc(lead.id)}" role="link" tabindex="0"><span class="pk">${esc(lead.tag)}</span><h2 class="ph1">${esc(lead.h)}</h2>${lead.own&&lead.a.sub?`<p class="pdeck">${esc(lead.a.sub)}</p>`:""}<div class="pby">Von ${esc(lead.au||"The Insider")}${lmin?` · ${lmin} Min. Lesezeit`:""}</div>${lead.own&&!lead.img?"":nimg(lead)}</div><div class="pcols${lb.length<450?" one":""}${lb.length>=120?" dc":""}">${lb?`<p>${esc(lb)}</p>`:""}</div><p class="pmorelnk"><button class="lnk" data-nr="${esc(lead.id)}">Weiterlesen ›</button></p></div>`
+    :`<div class="pmain"><span class="pk">Titelseite</span><h2 class="ph1">Diese Ausgabe ist noch leer</h2><p class="pdeck">Sobald du Ergebnisse unter Scores &amp; Schedule einträgst, Trades abschließt oder einen Artikel schreibst, füllt sich die Titelseite von selbst.</p><div class="row"><button class="btn pri" data-v="scores">Ergebnisse eintragen</button><button class="btn" id="artNew">✎ Artikel schreiben</button></div></div>`;
+  const resBox=`<div class="pbox"><div class="pbh">Ergebnisse · ${WL(w)}</div>${done.length?done.map(g=>{const aw=g.ap>g.hp,hw=g.hp>g.ap;return `<button class="psc" data-gc="${g.id}"><span class="${aw?"w":""}">${esc(nick(g.a))}</span><b class="${aw?"w":""}">${g.ap}</b><span class="${hw?"w":""}">${esc(nick(g.h))}</span><b class="${hw?"w":""}">${g.hp}</b></button>`}).join(""):`<p class="mut" style="margin:6px 0 0">Noch keine Ergebnisse eingetragen.</p>`}</div>`;
+  const idxBox=`<div class="pbox"><div class="pbh">In dieser Ausgabe</div><ol class="pidx"><li><span>Titelseite</span><i>1</i></li>${S2.map(x=>`<li><span>${esc(x[0])}</span><i>${x.no}</i></li>`).join("")}</ol></div>`;
+  const near=lead?`<div class="p3">${more.map(x=>pcard(x,3)).join("")}</div>`:"";
+  const idx=L.findIndex(x=>x.k===k),older=L[idx+1],newer=L[idx-1];
+  const mast=`<div class="pmast"><div class="pstrip"><span>Das Franchise-Magazin</span><span>Jahrgang ${jg} · Saison ${s}</span><span>${esc(edName(e))}</span></div><h1 class="ptitle">The Insider</h1><div class="pstrip"><span>${WL(w)} · ${w<=18?"Regular Season":"Playoffs"}</span><span>${done.length} Spiele · ${trades.length} Trade${trades.length===1?"":"s"}</span><span>Chefredaktion: ${esc(S.auth||"The Insider")}</span></div></div>`;
+  const nav=`<div class="pnav"><button class="btn" data-pned="${older?older.k:""}" ${older?"":"disabled"}>‹ Ältere</button><select id="edSel" aria-label="Ausgabe wählen">${edOpts(k)}</select><button class="btn" data-pned="${newer?newer.k:""}" ${newer?"":"disabled"}>Neuere ›</button><button class="btn pri" id="artNew" style="margin-left:auto">✎ Artikel für diese Ausgabe</button></div>`;
+  return `${nav}<div class="paper">${mast}<section class="ppage"><div class="pgrid">${mainH}<aside class="pside">${resBox}${idxBox}</aside></div>${near}</section>${S2.map(x=>`<section class="psec"><div class="psh"><h2>${esc(x[0])}</h2><span class="pno">Seite ${x.no}</span></div>${x[1]}</section>`).join("")}<p class="pfoot">${cur?`Die nächste Ausgabe erscheint, sobald du die Woche auf ${WL(Math.min(22,w+1))} stellst.`:`Archivausgabe · ${esc(edName(e))}, Saison ${s}.`}</p></div>`;
+}
+const newsModeBar=()=>`<div class="nmode"><div class="tabs">${[["paper","Zeitung"],["feed","Newsfeed"]].map(([k,l])=>`<button data-pmode="${k}" aria-pressed="${(S.nMode||"paper")===k}">${l}</button>`).join("")}</div></div>`;
+document.addEventListener("click",e=>{
+  const b=e.target.closest&&e.target.closest("button");if(!b)return;
+  if(b.dataset.pmode){S.nMode=b.dataset.pmode;S.nr=null;for(const k in PP)delete PP[k];render()}
+  else if(b.dataset.pned){S.nEd=b.dataset.pned===edKey(S.season,S.week)?"":b.dataset.pned;S.nr=null;render();window.scrollTo(0,0)}
+});
+document.addEventListener("change",e=>{const t=e.target;if(t&&t.id==="edSel"){S.nEd=t.value===edKey(S.season,S.week)?"":t.value;render();window.scrollTo(0,0)}});
 function news(){
   if(ART.open)return ART.pv?artPreview():artEditor();
-  if(S.nr){const x=newsFeed().all.find(y=>y.id===S.nr);if(x)return newsReader(x);S.nr=null}
-  return newsHub();
+  if(S.nr){const x=PP[S.nr]||newsFeed().all.find(y=>y.id===S.nr);if(x)return newsReader(x);S.nr=null}
+  edStamp();
+  return newsModeBar()+((S.nMode||"paper")==="paper"?paperView():newsHub());
 }
 
 function placeholder(k){
@@ -1516,7 +1671,7 @@ document.addEventListener("pointerup",pbUp);document.addEventListener("pointerca
 
 
 /* ===== Eigene Artikel (Rich-Text) ===== */
-const ART={ne:null,open:false,pv:false,id:null,t:"",sub:"",au:"",h:"",tag:"Analyse",top:false,cover:"",cc:"",cf:"center",del:null,rg:null,msg:""};
+const ART={ne:null,open:false,pv:false,id:null,t:"",sub:"",au:"",h:"",tag:"Analyse",top:false,cover:"",cc:"",cf:"center",del:null,rg:null,msg:"",eid:""};
 const ATAGS=["Analyse","Meinung","Trade","Draft","Gerücht","Recap","Vorschau","Kommentar","Interview"];
 const AOK={P:1,BR:1,B:1,STRONG:1,I:1,EM:1,U:1,S:1,H2:1,H3:1,UL:1,OL:1,LI:1,BLOCKQUOTE:1,A:1,IMG:1,DIV:1,STRIKE:1,DEL:1,SPAN:1,HR:1,FIGURE:1,FIGCAPTION:1};
 const ACLS={FIGURE:["fg","s25","s33","s50","s75","s100","l","c","r"],BLOCKQUOTE:["pull","callout"],P:["lead"]};
@@ -1580,7 +1735,7 @@ function artEditor(){
   return `<div class="nedit"><div class="card"><div class="sec"><h2>${ART.id?"Artikel bearbeiten":"Neuer Artikel"}</h2><button class="btn" id="artCancel" aria-label="Schließen">×</button></div>
   <input id="artT" value="${esc(ART.t)}" placeholder="Überschrift" style="width:100%;font:700 28px Georgia,serif;margin:6px 0">
   <input id="artSub" value="${esc(ART.sub)}" placeholder="Untertitel (kurze Zusammenfassung unter der Überschrift)" style="width:100%;margin:0 0 8px">
-  <div class="row" style="margin:0 0 8px"><select id="artTag" aria-label="Rubrik">${ATAGS.map(t=>`<option ${t===ART.tag?"selected":""}>${t}</option>`).join("")}</select><input id="artAu" value="${esc(ART.au)}" placeholder="Autor" aria-label="Autor" style="min-width:140px;flex:1"><label class="mut" style="display:flex;gap:6px;align-items:center"><input type="checkbox" id="artTop" ${ART.top?"checked":""}> Top-Story</label></div>
+  <div class="row" style="margin:0 0 8px"><select id="artTag" aria-label="Rubrik">${ATAGS.map(t=>`<option ${t===ART.tag?"selected":""}>${t}</option>`).join("")}</select><input id="artAu" value="${esc(ART.au)}" placeholder="Autor" aria-label="Autor" style="min-width:140px;flex:1"><label class="mut" style="display:flex;gap:6px;align-items:center"><input type="checkbox" id="artTop" ${ART.top?"checked":""}> Top-Story</label><select id="artEid" aria-label="Ausgabe der Zeitung" title="In welcher Ausgabe erscheint der Artikel?">${edOpts(ART.eid)}</select></div>
   <div class="row" style="margin:0 0 4px;align-items:flex-start"><div style="width:160px;max-width:40%">${ART.cover?`<div class="nimg"><img src="${esc(ART.cover)}" alt="" style="object-position:50% ${ART.cf==="top"?"0%":ART.cf==="bottom"?"100%":"50%"}"></div>`:`<div class="nimg ph c-own"><span class="nwm" style="font-size:20px">Titelbild</span></div>`}</div>
    <div style="flex:1;min-width:200px"><div class="row" style="margin:0 0 6px"><button class="btn" data-covb="1">${ART.cover?"Titelbild ändern":"🖼 Titelbild wählen"}</button>${ART.cover?`<button class="btn" data-covd="1">Entfernen</button><select id="artCf" aria-label="Bildausschnitt">${[["top","Ausschnitt: oben"],["center","Ausschnitt: Mitte"],["bottom","Ausschnitt: unten"]].map(([v,l])=>`<option value="${v}" ${ART.cf===v?"selected":""}>${l}</option>`).join("")}</select>`:""}<input type="file" id="artCov" accept="image/*" hidden></div>
    <input id="artCc" value="${esc(ART.cc)}" placeholder="Bildunterschrift / Quelle des Titelbilds" style="width:100%"></div></div></div>
@@ -1675,6 +1830,7 @@ document.addEventListener("input",e=>{const t=e.target;if(!t)return;
 document.addEventListener("paste",e=>{const t=e.target;if(t&&t.id==="artBody"&&e.clipboardData){e.preventDefault();const x=e.clipboardData.getData("text/plain");document.execCommand("insertText",false,x);artSync(t)}});
 document.addEventListener("change",e=>{const t=e.target;if(!t)return;
   if(t.id==="artTag")ART.tag=t.value;
+  else if(t.id==="artEid")ART.eid=t.value;
   else if(t.id==="artTop")ART.top=t.checked;
   else if(t.id==="artCf"){ART.cf=t.value;const b=document.getElementById("artBody");if(b)ART.h=artClean(b.innerHTML);render()}
   else if(t.id==="artFont"){if(t.value)artExec("fontName",t.value.split(",")[0].replace(/"/g,""));t.value=""}
@@ -1702,8 +1858,8 @@ document.addEventListener("click",e=>{
   else if(b.dataset.figs){const f=selFig();if(f){[...f.classList].filter(c=>/^s\d+$/.test(c)).forEach(c=>f.classList.remove(c));f.classList.add("s"+b.dataset.figs);artSync(document.getElementById("artBody"))}}
   else if(b.dataset.figa){const f=selFig();if(f){["l","c","r"].forEach(c=>f.classList.remove(c));f.classList.add(b.dataset.figa);artSync(document.getElementById("artBody"))}}
   else if(b.dataset.figdel){const f=selFig();if(f){f.remove();const bar=document.getElementById("figBar");if(bar)bar.hidden=true;artSync(document.getElementById("artBody"))}}
-  else if(id==="artNew"){Object.assign(ART,{open:true,pv:false,id:null,t:"",sub:"",au:S.auth||"",tag:"Analyse",top:false,cover:"",cc:"",cf:"center",h:"",rg:null,msg:""});render();window.scrollTo(0,0)}
-  else if(b.dataset.ae){const a=S.arts.find(x=>x.id===b.dataset.ae);if(a){Object.assign(ART,{open:true,pv:false,id:a.id,t:a.t,sub:a.sub||"",au:a.au||"",tag:a.tag||"Analyse",top:!!a.top,cover:a.cover||"",cc:a.cc||"",cf:a.cf||"center",h:sanitizeHTML(a.h),rg:null,msg:""});render();window.scrollTo(0,0)}}
+  else if(id==="artNew"){Object.assign(ART,{open:true,pv:false,id:null,t:"",sub:"",au:S.auth||"",tag:"Analyse",top:false,cover:"",cc:"",cf:"center",h:"",rg:null,msg:"",eid:edSelKey()});render();window.scrollTo(0,0)}
+  else if(b.dataset.ae){const a=S.arts.find(x=>x.id===b.dataset.ae);if(a){Object.assign(ART,{open:true,pv:false,id:a.id,t:a.t,sub:a.sub||"",au:a.au||"",tag:a.tag||"Analyse",top:!!a.top,cover:a.cover||"",cc:a.cc||"",cf:a.cf||"center",h:sanitizeHTML(a.h),rg:null,msg:"",eid:a.eid||edSelKey()});render();window.scrollTo(0,0)}}
   else if(b.dataset.ad){if(ART.del===b.dataset.ad){S.arts=S.arts.filter(x=>x.id!==b.dataset.ad);ART.del=null;if(S.nr==="a:"+b.dataset.ad)S.nr=null}else ART.del=b.dataset.ad;render()}
   else if(id==="nrBack"){S.nr=null;ART.del=null;render();window.scrollTo(0,0)}
   else if(id==="artPrev"){artDraft();ART.pv=true;render();window.scrollTo(0,0)}
@@ -1713,7 +1869,7 @@ document.addEventListener("click",e=>{
     const a0=artDraft(),t=(ART.t||"").trim(),h=a0.h;
     if(!t){ART.msg="Bitte eine Überschrift eingeben.";render();return}
     if(!artText(h)&&!/<img/i.test(h)){ART.msg="Der Artikel hat noch keinen Text.";render();return}
-    const f={t,sub:(ART.sub||"").trim(),au:(ART.au||"").trim(),h,tag:ART.tag,top:!!ART.top,cover:ART.cover||"",cc:(ART.cc||"").trim(),cf:ART.cf||"center"};
+    const f={t,sub:(ART.sub||"").trim(),au:(ART.au||"").trim(),h,tag:ART.tag,top:!!ART.top,cover:ART.cover||"",cc:(ART.cc||"").trim(),cf:ART.cf||"center",eid:ART.eid||edSelKey()};
     if(f.au)S.auth=f.au;
     let nid;
     if(ART.id){const a=S.arts.find(x=>x.id===ART.id);if(a){Object.assign(a,f);a.ed=Date.now();nid=a.id}}
